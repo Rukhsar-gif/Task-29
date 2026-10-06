@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top-header">
+    <div>
+        <p class="eyebrow">VEDA TECHNOLOGY • TASK 29</p>
+        <h1>Interactive Resume Builder</h1>
+        <p class="subtitle">
+            Fill in your details and create a professional resume with a live preview.
+        </p>
+    </div>
+
+    <button id="printBtn" class="print-btn" type="button">
+        Print / Save PDF
+    </button>
+</header>
+
+<main class="app-container">
+
+    <!-- FORM PANEL -->
+    <section class="form-panel">
+
+        <div class="section-box">
+            <h2>Personal Information</h2>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input
+                        type="text"
+                        id="fullName"
+                        placeholder="Enter your full name"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="jobTitle">Job Title</label>
+                    <input
+                        type="text"
+                        id="jobTitle"
+                        placeholder="e.g. Full Stack Developer"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="you@example.com"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input
+                        type="text"
+                        id="phone"
+                        placeholder="+91 9876543210"
+                    >
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="location">Location</label>
+                    <input
+                        type="text"
+                        id="location"
+                        placeholder="City, State, Country"
+                    >
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="summary">Professional Summary</label>
+                    <textarea
+                        id="summary"
+                        rows="5"
+                        placeholder="Write a short professional summary..."
+                    ></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="section-box">
+            <div class="section-title-row">
+                <h2>Education</h2>
+                <button id="addEducation" class="secondary-btn" type="button">
+                    + Add Education
+                </button>
+            </div>
+
+            <div id="educationContainer"></div>
+        </div>
+
+        <!-- EXPERIENCE -->
+        <div class="section-box">
+            <div class="section-title-row">
+                <h2>Experience</h2>
+                <button id="addExperience" class="secondary-btn" type="button">
+                    + Add Experience
+                </button>
+            </div>
+
+            <div id="experienceContainer"></div>
+        </div>
+
+        <div class="form-actions">
+            <button id="clearBtn" class="danger-btn" type="button">
+                Clear Resume
+            </button>
+
+            <button id="printBtnBottom" class="primary-btn" type="button">
+                Print / Save PDF
+            </button>
+        </div>
+
+    </section>
+
+    <!-- PREVIEW PANEL -->
+    <section class="preview-panel">
+
+        <div class="preview-label">
+            LIVE PREVIEW
+        </div>
+
+        <div id="resumePreview" class="resume-paper">
+
+            <div class="resume-header">
+                <h1 id="previewName">Your Name</h1>
+                <h2 id="previewJobTitle">Professional Title</h2>
+
+                <div class="contact-info">
+                    <span id="previewEmail">email@example.com</span>
+                    <span id="previewPhone">+91 XXXXX XXXXX</span>
+                    <span id="previewLocation">City, State</span>
+                </div>
+            </div>
+
+            <section class="resume-section" id="summarySection">
+                <h3>PROFILE</h3>
+                <p id="previewSummary">
+                    Your professional summary will appear here.
+                </p>
+            </section>
+
+            <section class="resume-section">
+                <h3>EDUCATION</h3>
+                <div id="previewEducation">
+                    <p class="empty-preview">Add your education details.</p>
+                </div>
+            </section>
+
+            <section class="resume-section">
+                <h3>EXPERIENCE</h3>
+                <div id="previewExperience">
+                    <p class="empty-preview">Add your experience details.</p>
+                </div>
+            </section>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
